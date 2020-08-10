@@ -1,0 +1,17 @@
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.bg-light {
+    background: #2744a2 !important;
+}
+
+.navbar-brand img {
+    filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
+}
+
+.navbar {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
