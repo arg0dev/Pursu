@@ -1,17 +1,155 @@
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 16px;
 }
 
-.bg-light {
-    background: #2744a2 !important;
-}
-
-.navbar-brand img {
-    filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
-}
-
 .navbar {
-    padding-top: 1em;
-    padding-bottom: 1em;
+    transition: 0.25s ease;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background: transparent !important;
+    
 }
+
+.navbar .nav-link {
+    transition: 0.25s ease;
+    color: #2744a2 !important;
+}
+
+.navbar.active {
+    background: #fff !important;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+    padding-top: 0em;
+    padding-bottom: 0em;
+
+}
+
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(39, 68, 162, 0.979)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    outline: none !important;
+    border: none !important;
+}
+
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar.active .nav-link {
+    color: rgb(221, 221, 221);
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #555;
+}
+
+.navbar-brand {
+
+}
+
+header {
+    position: relative;
+    background-color: black;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  header .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.7;
+    z-index: 1;
+  }
+
+#details {
+    margin-top: 15em;
+}
+
+#details p {
+    font-size: 1.25em;
+    margin-bottom: 0.20em;
+    font-weight: 400;
+    color: #686868;
+}
+
+#details h1 {
+    font-size: 4em;
+    margin-bottom: 0.30em;
+    color: #2744a2;
+}
+
+#flt_img {
+    padding: 1em;
+}
+
+#indicator {
+    font-size: 2em;
+    color: #2744a2;
+}
+
+#indicator .hud {
+    font-size: 0.7em;
+    padding-top: 1em ;
+}
+
+.btn-pure {
+    background: #f7f7f7;
+    color: #2744a2;
+    outline: none;
+    padding: 0.7em;
+    border-radius: 2em;
+    font-size: 1.15em;
+    border: 3px solid #e7e7e7;
+    box-shadow: -13px -11px 31px 0px white, 14.849px 14.849px 30px 0px rgba(129, 137, 165, 0.3), inset -10.607px -10.607px 29px 0px rgba(12, 27, 74, 0.1);
+}
+
+.s1 {   
+    position: relative;
+}
+
+@media (pointer: coarse) and (hover: none) {
+    header {
+      background: url('https://source.unsplash.com/tSuRmLEBwp0/1920x1080') black no-repeat center center scroll;
+    }
+    header video {
+      display: none;
+    }
+  }
+
+  @media (max-width: 991px) and (orientation: landscape) {
+      .navbar {
+          background: #2744a2 !important;
+      }
+  }
