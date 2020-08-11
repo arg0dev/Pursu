@@ -49,19 +49,16 @@ body {
     color: #555;
 }
 
-.navbar-brand {
-
-}
-
 header {
     position: relative;
     background-color: black;
-    height: 100vh;
-    min-height: 25rem;
+    height: 100%;
+    min-height: 100vh;
     width: 100%;
     overflow: hidden;
   }
   
+
   header video {
     position: absolute;
     top: 50%;
@@ -105,7 +102,7 @@ header {
 }
 
 #details h1 {
-    font-size: 4em;
+    font-size: 3.50em;
     margin-bottom: 0.30em;
     color: #2744a2;
 }
@@ -115,11 +112,12 @@ header {
 }
 
 #indicator {
+    margin-top: 5em !important;
     font-size: 2em;
     color: #2744a2;
 }
 
-#indicator .hud {
+.hud {
     font-size: 0.7em;
     padding-top: 1em ;
 }
@@ -135,6 +133,12 @@ header {
     box-shadow: -13px -11px 31px 0px white, 14.849px 14.849px 30px 0px rgba(129, 137, 165, 0.3), inset -10.607px -10.607px 29px 0px rgba(12, 27, 74, 0.1);
 }
 
+.btn-pure:hover {
+    background: #2744a2;
+    color: #fff;
+    border: 3px solid #2744a7;
+}
+
 .s1 {   
     position: relative;
 }
@@ -148,8 +152,40 @@ header {
     }
   }
 
-  @media (max-width: 991px) and (orientation: landscape) {
-      .navbar {
-          background: #2744a2 !important;
-      }
-  }
+ 
+/* .cuting-bottom {
+  position: relative;
+  z-index: 1;
+  background:#00cc00;
+}
+.cuting-bottom:after {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+}
+.cuting-bottom:after {
+  bottom: 0;
+  -webkit-transform: skewY(-2deg);
+          transform: skewY(-2deg);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+
+.cross {
+  color: #fff;
+  font-family: 'Fira Sans', sans-serif;
+  margin: 0 0 200px;
+  padding: 20% 20px;
+  text-align: center;
+} */
+
+
+/* <div class="cross cuting-bottom">
+  <h1>Cross Bottom cutting</h1>
+</div> */
