@@ -178,8 +178,9 @@ div.m-swiper {
     z-index: 5;
     height: 55vh;
     background: url('/assets/img/gelincik.png');
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: right bottom -190px;
+    background-position: right bottom;
     background-color: #f7f7f7;
 }
 
