@@ -21,3 +21,22 @@ $(document).ready(function(){
       $('.arg0_swiper').slick('slickNext');
     });
   });
+
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+    document.getElementById("myNav-2").style.width = "50%";
+    $('.navbar').removeClass('active');
+    $('.navbar-brand').removeClass('abracadabra');
+    $('.hamburger').removeClass('abracadabra');
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+    document.getElementById("myNav-2").style.width = "0%";
+    $('.navbar-brand').addClass('abracadabra');
+    $('.hamburger').addClass('abracadabra');
+    $('.navbar').addClass('active');
+  }
+
+
+  

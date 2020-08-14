@@ -7,6 +7,113 @@ body {
     font-size: 16px;
 }
 
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #2744a7;
+  overflow-x: hidden;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger.abracadabra {
+  display: block !important;
+}
+
+.navbar-brand {
+  display: none;
+}
+
+.navbar-brand.abracadabra {
+  display: block !important;
+}
+
+.overlay-2 {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 5em;
+}
+
+#overlay-text {
+  color: #fff;
+  margin-top: 1em;
+  text-align: start;
+  font-size: 20px;
+}
+
+.overlay-content-2 {
+  position: relative;
+  top: 25%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  width: 50%;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #2744a7;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 70px;
+}
+
+#b-top {
+  border-top: solid 1px rgba(255, 255, 255, 0.075);
+  margin-top: 3em;
+  width: 45%;
+}
+
+#mini_f {
+  color: #fff;
+}
+
+
+
+.closebtn::before {
+  font-size: 30px;
+  position: absolute;
+  top: 41px;
+  left: -70px;
+  content: "Kapat";
+}
+
 .navbar {
     transition: 0.25s ease;
     padding-top: 2em;
@@ -92,6 +199,18 @@ header {
     transform: skewY(-2deg);
     z-index: 3;
   }
+
+  .crosser-bt {
+    position: absolute;
+    width: 100%;
+    height: 15vh;
+    background: #2744a7;
+    box-sizing: border-box;
+    color: #fff;
+    transform-origin: bottom left;
+    transform: skewY(-2deg);
+    z-index: 8;
+  }
   
   header .container {
     position: relative;
@@ -110,7 +229,7 @@ header {
   }
 
 #details {
-    margin-top: 15em;
+    margin-top: 20em;
 }
 
 #details p {
@@ -184,8 +303,10 @@ div.m-swiper {
     background: url('/assets/img/gelincik.png');
     background-size: auto;
     background-repeat: no-repeat;
-    background-position: right bottom;
+    background-position: right -10em bottom;
     background-color: #f7f7f7;
+    outline: none;
+    padding-bottom: 15em;
 }
 
 div.text h1{
@@ -204,7 +325,6 @@ div.text h6{
 
 .prodtl {
   margin-top: 2em;
-
 }
 
 .prodtl h3 {
@@ -262,7 +382,7 @@ div.text h6{
 
 .sec_1 {
   position: relative;
-  z-index: 7 ;
+  z-index: 7;
   background-color: #f7f7f7;
 }
 
@@ -270,10 +390,37 @@ div.text h6{
   display: none !important;
 }
 
+.brief{
+  background-color: #2744a7 !important;
+  position: relative;
+  z-index: 9;
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+#cover {
+  position: absolute;
+  margin-top: -9em;
+  z-index: 10 !important;
+}
+
+.bottle_cover {
+  position: relative;
+}
+
+#footext {
+  text-align: end;
+}
+
+footer {
+  color: #fff;
+}
+
 
 @media (pointer: coarse) and (hover: none) {
     header {
       background: url('https://source.unsplash.com/tSuRmLEBwp0/1920x1080') black no-repeat center center scroll;
+      background-size: cover;
     }
     header video {
       display: none;
@@ -307,7 +454,6 @@ div.text h6{
       background-size: contain;
       background-position: right -100px top 100px;
   }
-  
 
   }
 
@@ -318,13 +464,30 @@ div.text h6{
 
     .mobile_products {
       padding: 0;
-      position: relative;
+      position: relative !important;
       z-index: 5;
+      display: block !important;
+      background-color: #f7f7f7;
+      padding-bottom: 10em;
+    }
+
+    .mobile_products::after {
       background: url('/assets/img/gelincik.png');
       background-size: auto;
       background-repeat: no-repeat;
-      background-position: right bottom;
-      background-color: #f7f7f7;
-      display: block !important;
+      background-position: right -10em bottom;
+      position: absolute !important;
+      content: "";
+      z-index: -1;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0.25;
     }
+
+    #overlay-text {
+      font-size: 15px !important;
+    }
+
   }

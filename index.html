@@ -8,7 +8,7 @@
 
   <!-- arg0 meta tags -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <meta name="description" content="Lorem ipsum dolor sit amet">
   <meta name="author" content="Barış Albayrak">
   <meta name="theme-color" content="#2744a2">
@@ -51,20 +51,38 @@
 <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand abracadabra" href="#">
         <img src="/assets/img/logo.svg" width="70" height="70" class="d-inline-block align-top" alt="" loading="lazy">
       </a>
-      <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
-        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon custom-toggler"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-          <a class="nav-link active" href="#">Ana Sayfa</a>
-          <a class="nav-link" href="#">Ürünler</a>
-          <a class="nav-link" href="#">Hakkımızda</a>
-          <a class="nav-link" href="#">İletişim</a>
+      <span class="hamburger abracadabra" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      <div id="myNav" class="overlay">
+        <div class="overlay-content-2">
+          <div class="col-md-12 text-center">
+          <img src="/assets/img/logo_w-01.svg" height="96px" width="96px">
+        </div>
+        <div class="col-md-12 d-flex justify-content-center mt-5">
+          <div id="overlay-text">
+            <i class="fas fa-map-marker mr-3"></i><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span><br/>
+            <i class="fas fa-phone-alt mr-3"></i><span>+90 0500 000 00 00 </span><br/>
+            <i class="fas fa-paper-plane mr-3"></i><span>arg0.dev </span>
+          </div>
+        </div>
+        <hr id="b-top">
+        <div class="col-md-12 d-flex justify-content-center mt-3">
+          <img src="/assets/img/pursu_logo-01.svg" height="96px" width="96px">
+        </div>
+        <div class="col d-flex justify-content-center" id="mini_f">
+          <p>All Rights Reserved <span id="year"><script>document.write(new Date().getFullYear());</script></span></p>
+        </div>
+        </div>
+        <div id="myNav-2" class="overlay-2">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="#">Ana Sayfa</a>
+            <a href="#">Ürünlerimiz</a>
+            <a href="#">Hakkımızda</a>
+            <a href="#">İletişim</a>
+          </div>
         </div>
       </div>
   </nav>
@@ -85,7 +103,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum nisl, euismod id lorem ac,
               consectetur faucibus eros. Aenean quis bibendum dolor. </p>
             <a href="#products"><button type="button" class="mt-5 mb-5 btn btn-primary btn-pure mt-4"><i
-                class="fas fa-tint mr-2"></i>Ürünlerimize gözat</button></a>
+                  class="fas fa-tint mr-2"></i>Ürünlerimize gözat</button></a>
           </div>
           <div class="m-scroll">
             <div class="m-swiper">
@@ -126,15 +144,19 @@
               ante ut rutrum euismod. </p>
           </div>
           <div class="col-md-6 d-flex ml-auto justify-content-end">
-            <button id="arg0_swiper--prev" type="button" class="btn btn-ind-prev mr-2" alt="Previous"><i class="fas fa-chevron-left ml-2 mr-2"></i></button>
-            <button id="arg0_swiper--next" type="button" class="btn btn-ind-next" alt="Next"><i class="fas fa-chevron-right ml-2 mr-2"></i></button>
+            <button id="arg0_swiper--prev" type="button" class="btn btn-ind-prev mr-2" alt="Previous"><i
+                class="fas fa-chevron-left ml-2 mr-2"></i></button>
+            <button id="arg0_swiper--next" type="button" class="btn btn-ind-next" alt="Next"><i
+                class="fas fa-chevron-right ml-2 mr-2"></i></button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-<!-- MOBILE CAROUSEL GRID SYS | START -->
+  <div id="products"></div>
+
+  <!-- MOBILE CAROUSEL GRID SYS | START -->
   <section class="arg0_swiper mobile_products">
     <div class="item">
       <div class="container">
@@ -153,9 +175,9 @@
           </div>
         </div>
       </div>
-     </div> 
+    </div>
 
-     <div class="item">
+    <div class="item">
       <div class="container">
         <div class="row">
           <div class="col-md-12 mt-5 pb-5">
@@ -172,9 +194,9 @@
           </div>
         </div>
       </div>
-     </div> 
+    </div>
 
-     <div class="item">
+    <div class="item">
       <div class="container">
         <div class="row">
           <div class="col-md-12 mt-5 pb-5">
@@ -191,9 +213,9 @@
           </div>
         </div>
       </div>
-     </div> 
+    </div>
 
-     <div class="item">
+    <div class="item">
       <div class="container">
         <div class="row">
           <div class="col-md-12 mt-5 pb-5">
@@ -210,9 +232,9 @@
           </div>
         </div>
       </div>
-     </div> 
+    </div>
 
-     <div class="item">
+    <div class="item">
       <div class="container">
         <div class="row">
           <div class="col-md-12 mt-5 pb-5">
@@ -223,16 +245,17 @@
               <div class="prodtl text-center">
                 <h3><i>Cam Damacana</i></h3>
                 <h6>15 L</h6>
-                <p>Uludağ ve Nazilli’deki kaynaklarımızda sizin için el değmeden şişelenen Pürsu ürünlerimiz, dengeli mineral yapısıyla vücudunuzun eşsiz dengesini korumaya yardımcı olur.</p>
+                <p>Uludağ ve Nazilli’deki kaynaklarımızda sizin için el değmeden şişelenen Pürsu ürünlerimiz, dengeli
+                  mineral yapısıyla vücudunuzun eşsiz dengesini korumaya yardımcı olur.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-     </div> 
+    </div>
 
 
-     <div class="item">
+    <div class="item">
       <div class="container">
         <div class="row">
           <div class="col-md-12 mt-5 pb-5">
@@ -243,16 +266,17 @@
               <div class="prodtl text-center">
                 <h3><i>Damacana</i></h3>
                 <h6>19 L PC</h6>
-                <p>Uludağ ve Nazilli’deki kaynaklarımızda sizin için el değmeden şişelenen Pürsu ürünlerimiz, dengeli mineral yapısıyla vücudunuzun eşsiz dengesini korumaya yardımcı olur.</p>
+                <p>Uludağ ve Nazilli’deki kaynaklarımızda sizin için el değmeden şişelenen Pürsu ürünlerimiz, dengeli
+                  mineral yapısıyla vücudunuzun eşsiz dengesini korumaya yardımcı olur.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-     </div> 
+    </div>
 
 
-     <div class="item">
+    <div class="item">
       <div class="container">
         <div class="row">
           <div class="col-md-12 mt-5 pb-5">
@@ -263,15 +287,16 @@
               <div class="prodtl text-center">
                 <h3><i>Pet Şişe</i></h3>
                 <h6>5 L</h6>
-                <p>Uludağ ve Nazilli’deki kaynaklarımızda sizin için el değmeden şişelenen Pürsu ürünlerimiz, dengeli mineral yapısıyla vücudunuzun eşsiz dengesini korumaya yardımcı olur.</p>
+                <p>Uludağ ve Nazilli’deki kaynaklarımızda sizin için el değmeden şişelenen Pürsu ürünlerimiz, dengeli
+                  mineral yapısıyla vücudunuzun eşsiz dengesini korumaya yardımcı olur.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-     </div> 
+    </div>
 
-     <div class="item">
+    <div class="item">
       <div class="container">
         <div class="row">
           <div class="col-md-12 mt-5 pb-5">
@@ -288,11 +313,11 @@
           </div>
         </div>
       </div>
-     </div> 
+    </div>
   </section>
-<!-- MOBILE CAROUSEL GRID SYS | END -->
+  <!-- MOBILE CAROUSEL GRID SYS | END -->
 
-  <section class="arg0_swiper products" id="products">
+  <section class="arg0_swiper products">
     <div class="item">
       <div class="container">
         <div class="row">
@@ -359,7 +384,8 @@
               <div class="prodtl text-center">
                 <h3><i>Cam Damacana</i></h3>
                 <h6>15 L</h6>
-                <p>Uludağ ve Nazilli’deki kaynaklarımızda sizin için el değmeden şişelenen Pürsu ürünlerimiz, dengeli mineral yapısıyla vücudunuzun eşsiz dengesini korumaya yardımcı olur.</p>
+                <p>Uludağ ve Nazilli’deki kaynaklarımızda sizin için el değmeden şişelenen Pürsu ürünlerimiz, dengeli
+                  mineral yapısıyla vücudunuzun eşsiz dengesini korumaya yardımcı olur.</p>
               </div>
             </div>
           </div>
@@ -371,7 +397,8 @@
               <div class="prodtl text-center">
                 <h3><i>Damacana</i></h3>
                 <h6>19 L PC</h6>
-                <p>Uludağ ve Nazilli’deki kaynaklarımızda sizin için el değmeden şişelenen Pürsu ürünlerimiz, dengeli mineral yapısıyla vücudunuzun eşsiz dengesini korumaya yardımcı olur.</p>
+                <p>Uludağ ve Nazilli’deki kaynaklarımızda sizin için el değmeden şişelenen Pürsu ürünlerimiz, dengeli
+                  mineral yapısıyla vücudunuzun eşsiz dengesini korumaya yardımcı olur.</p>
               </div>
             </div>
           </div>
@@ -383,7 +410,8 @@
               <div class="prodtl text-center">
                 <h3><i>Pet Şişe</i></h3>
                 <h6>5 L</h6>
-                <p>Uludağ ve Nazilli’deki kaynaklarımızda sizin için el değmeden şişelenen Pürsu ürünlerimiz, dengeli mineral yapısıyla vücudunuzun eşsiz dengesini korumaya yardımcı olur.</p>
+                <p>Uludağ ve Nazilli’deki kaynaklarımızda sizin için el değmeden şişelenen Pürsu ürünlerimiz, dengeli
+                  mineral yapısıyla vücudunuzun eşsiz dengesini korumaya yardımcı olur.</p>
               </div>
             </div>
           </div>
@@ -404,6 +432,42 @@
     </div>
   </section>
 
+
+  <div class="crosser-bt">
+    
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <img id="cover" src="/assets/img/contact-bg.png">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="brief">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="/assets/img/pursu_logo-01.svg" height="96px" width="96px">
+        </div>
+        <div class="col-md-4 ml-auto">
+          <div id="footext">
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span><i class="fas fa-paper-plane ml-3"></i><br/>
+            <span>+90 0500 000 00 00 </span><i class="fas fa-phone-alt ml-3"></i><br/>
+            <span>arg0.dev </span><i class="fas fa-paper-plane ml-3"></i>
+          </div>
+          </div>
+          <div class="col-md-12">
+            <hr id="b-top" class="w-100">
+            <div id="copyright d-flex">
+            <p class="d-flex justify-content-end">All Rights Reserved <span><script>document.write(new Date().getFullYear() +"&nbsp;&nbsp;©");</script></span></p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
 
 
 </body>
