@@ -55,8 +55,8 @@
       <a class="navbar-brand abracadabra" href="#">
         <img src="/assets/img/logo.svg" width="70" height="70" class="d-inline-block align-top" alt="" loading="lazy">
       </a>
-      <span class="hamburger abracadabra" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-      <div id="myNav" class="overlay">
+      <span class="hamburger abracadabra" style="font-size:30px;cursor:pointer; color: #2744a7;" onclick="openNav()">&#9776;</span>
+      <div id="arg0_nav" class="overlay">
         <div class="overlay-content-2">
           <div class="col-md-12 text-center">
             <img src="/assets/img/logo_w-01.svg" height="96px" width="96px">
@@ -78,7 +78,7 @@
                 <script>document.write(new Date().getFullYear());</script></span></p>
           </div>
         </div>
-        <div id="myNav-2" class="overlay-2">
+        <div id="arg0_nav-2" class="overlay-2">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <div class="overlay-content">
             <a href="#" onclick="closeNav()">Ana Sayfa</a>
@@ -433,8 +433,8 @@
     </div>
   </section>
 
-  
-  <div class="crosser-wt"  id="contact">
+
+  <div class="crosser-wt" id="contact">
   </div>
 
   <section class="contact">
@@ -448,31 +448,32 @@
               Sed eu turpis nisl. Nullam ac sollicitudin augue. Ut ac imperdiet sem, at finibus massa. Proin bibendum
               ante ut rutrum euismod. </p>
           </div>
-            <div class="col-md-6 float-md-left text-md-left text-right mt-5">
-              <br/>
-                <p><i class="fas fa-paper-plane mr-3"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p><i class="fas fa-phone-alt mr-3"></i>+90 0500 000 00 00 </p>
-            </div>
+          <div class="col-md-6 float-md-left text-md-left text-right mt-5">
+            <br />
+            <p><i class="fas fa-paper-plane mr-3"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p><i class="fas fa-phone-alt mr-3"></i>+90 0500 000 00 00 </p>
+          </div>
 
+        </div>
       </div>
     </div>
-  </div>
-    
+
     <div class="container">
       <div class="row">
         <div class="col-md col-xs-12">
-          <form class="was-validated">
+          <form class="was-validated" method="POST" action="/assets/php/process.php">
             <div class="form-group">
               <label for="mail">E-Posta</label>
-              <input type="email" class="form-control" id="mail" placeholder="E-Posta Adresiniz" required>
+              <input type="email" class="form-control" id="mail" placeholder="E-Posta Adresiniz" name="email" required>
             </div>
             <div class="form-group">
               <label for="phone">Telefon</label>
-              <input type="text" pattern="[0-9]+" maxlength="11" class="form-control" id="phone" placeholder="Telefon Numaranız" required>
+              <input type="text" pattern="[0-9]+" maxlength="11" class="form-control" id="phone"
+                placeholder="Telefon Numaranız" name="phone" required>
             </div>
             <div class="form-group">
               <label for="subject">Konu</label>
-              <select id="subject" class="form-control">
+              <select id="subject" name="subject" class="form-control">
                 <option selected hidden>Bir konu seçiniz</option>
                 <option>Sipariş</option>
                 <option>Şikayet, Öneri vb. seçiniz</option>
@@ -480,17 +481,18 @@
             </div>
             <div class="form-group">
               <label for="address">Adres</label>
-              <textarea class="form-control" rows="3" id="address" placeholder="Adresiniz"></textarea>
+              <textarea class="form-control" name="address" maxlength="250" rows="3" id="address" placeholder="Adresiniz" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-pure m-fw"><i class="fas fa-share"></i>&nbsp;&nbsp;Gönder</button>
-              </form>
-    </div>
+            <button type="submit" class="btn btn-primary btn-pure m-fw"><i
+                class="fas fa-share"></i>&nbsp;&nbsp;Gönder</button>
+          </form>
+        </div>
 
         <div class="map">
           <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.897176502667!2d29.108323215735272!3d40.98373232888319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7c5891cc3bf%3A0x2e8746b0ec51372a!2sReklam%20Odas%C4%B1!5e0!3m2!1str!2str!4v1597505266078!5m2!1str!2str"
-          width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-          tabindex="0"></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.897176502667!2d29.108323215735272!3d40.98373232888319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7c5891cc3bf%3A0x2e8746b0ec51372a!2sReklam%20Odas%C4%B1!5e0!3m2!1str!2str!4v1597505266078!5m2!1str!2str"
+            width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
         </div>
       </div>
     </div>
@@ -558,7 +560,7 @@
     </div>
   </div>
 
-  
+
 
 </body>
 
