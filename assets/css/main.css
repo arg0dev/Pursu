@@ -567,6 +567,7 @@ footer {
   resize: none;
 }
 
+
 @media (pointer: coarse) and (hover: none) {
     header {
       background: url('https://source.unsplash.com/tSuRmLEBwp0/1920x1080') black no-repeat center center scroll;
