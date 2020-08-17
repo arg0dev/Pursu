@@ -61,6 +61,11 @@ body {
       border-bottom: solid 1px rgb(223, 223, 223);
   }
 
+  #logo {
+      width: 92px;
+      height: 92px;
+      background: url('/assets/img/logo.svg');
+  }
 
   #footer p {
       font-size: 1em;
