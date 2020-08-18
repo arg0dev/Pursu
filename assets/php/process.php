@@ -1,5 +1,7 @@
 ﻿<?php
 
+echo "<meta http-equiv='refresh' content='0;url=/index.html'>";
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -27,8 +29,8 @@ $mail->addAddress("musteri@eryilmazlar.net");
 
 $body = file_get_contents('./process.html');
 
-$gelen = ["flow_1","flow_2","flow_3","flow_4"];
-$giden = [$_POST['email'],$_POST['phone'],$_POST['subject'],$_POST['address']];
+$gelen = ["flow_1","flow_2","flow_3","flow_4","flow_5"];
+$giden = [$_POST['email'],$_POST['phone'],$_POST['subject'],$_POST['address'],$_POST['message']];
 
 $body = str_replace($gelen,$giden,$body);
 
