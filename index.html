@@ -81,16 +81,16 @@
         <div id="arg0_nav-2" class="overlay-2">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <div class="overlay-content">
-            <a href="#" onclick="closeNav()">Ana Sayfa</a>
-            <a href="#products" onclick="closeNav()">Ürünlerimiz</a>
-            <a href="#" onclick="closeNav()">Hakkımızda</a>
-            <a href="#contact" onclick="closeNav()">İletişim</a>
+            <a href="#home" duration="1000" easing="smooth" class="scrollOnClick" scrollTo="home" onclick="closeNav()">Ana Sayfa</a>
+            <a href="#products" duration="1000" easing="smooth" class="scrollOnClick" scrollTo="products" onclick="closeNav()">Ürünlerimiz</a>
+            <a href="#home" duration="1000" easing="smooth" class="scrollOnClick" scrollTo="home" onclick="closeNav()">Hakkımızda</a>
+            <a href="#contact" duration="1000" easing="smooth" class="scrollOnClick" scrollTo="contact" onclick="closeNav()">İletişim</a>
           </div>
         </div>
       </div>
   </nav>
   </div>
-  <header>
+  <header id="home">
     <div class="overlay"></div>
     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
       <source src="/assets/img/bg_reverse.mp4" type="video/mp4">
@@ -105,7 +105,7 @@
             <h1>ERYILMAZLAR</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum nisl, euismod id lorem ac,
               consectetur faucibus eros. Aenean quis bibendum dolor. </p>
-            <a href="#products"><button type="button" class="mt-5 mb-5 btn btn-primary btn-pure mt-4"><i
+            <a href="#products" duration="1000" easing="smooth" class="scrollOnClick" scrollTo="products"><button type="button" class="mt-5 mb-5 btn btn-primary btn-pure mt-4"><i
                   class="fas fa-tint mr-2"></i>Ürünlerimize gözat</button></a>
           </div>
           <div class="m-scroll">
@@ -554,7 +554,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <a href="#"><button type="button" class="btn btn-primary btn-scroll">
+          <a href="#" duration="1000" easing="smooth" class="scrollOnClick" scrollTo="home"><button type="button" class="btn btn-primary btn-scroll">
               <svg width="32" height="32" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d=" M 517 232C 517 232 517 232 517 232C 518 232 518 232 518 232C 518 232 718 432 718 432C 728 442 728 458 718 468C 708 478 692 478 682 468C 682 468 525 310 525 310C 525 310 526 750 526 750C 526 764 515 776 501 776C 487 776 475 764 476 750C 476 750 475 310 475 310C 475 310 318 468 318 468C 308 478 292 478 282 468C 272 458 272 442 282 432C 282 432 479 235 479 235C 484 229 492 225 500 225C 506 225 513 227 517 232C 517 232 517 232 517 232" />
