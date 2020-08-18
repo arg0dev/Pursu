@@ -23,7 +23,7 @@ $mail->Password = "N0P455W0RD";
 
 
 $mail->setFrom("noreply@eryilmazlar.net");
-$mail->addAddress("arg0@eryilmazlar.net");
+$mail->addAddress("musteri@eryilmazlar.net");
 
 $body = file_get_contents('./process.html');
 
