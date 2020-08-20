@@ -563,6 +563,13 @@ footer {
   resize: none;
 }
 
+#text-c i {
+  color: #686f76;
+}
+
+.text p {
+  color: #686f76;
+}
 
 @media (pointer: coarse) and (hover: none) {
     header {
