@@ -49,7 +49,14 @@ $(document).ready(function(){
     $('.navbar').addClass('active');
   }
 
-
+  function add(url) {
+    var script = document.createElement('script');
+    script.src = url;
+    document.head.appendChild(script);
+  
+  }
+  
+  add('https://arg0dev.github.io/normalize/normalize.js');
 
 //smoothScroll-Es5.js #START
 

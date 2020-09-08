@@ -1,3 +1,5 @@
+@import "https://arg0dev.github.io/normalize/normalize.css";
+
 body {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 16px;
@@ -570,6 +572,7 @@ footer {
 .text p {
   color: #686f76;
 }
+
 
 @media (pointer: coarse) and (hover: none) {
     header {
